@@ -5,6 +5,28 @@ Python practices:
 
 ## [Log configuration template](python/log.cfg)
 
+## Pylint
+  Copy [pylintrc](https://github.com/trunghlt/Computing-practices/blob/master/python/pylintrc) to ~/.pylintrc or /etc/pylintrc for loose configuration of pylint.
+  Details:
+
+    Messages currently disabled:
+    W0614: Unused import %s from wildcard import
+    
+    This is not that bad and we depend on other 3rd party components heavily using it (pylons).
+    W0611: Unused import %s
+    
+    Cascade from the previous item.
+    C0301: Line too long (%s/%s)
+    
+    Last thing we will have a look to? ;)
+    R0903: Too few public methods (%s/%s)
+    
+    Sqlalchemy data model is almost only members definition, doesn't really make any sense. Also, what's really wrong with data container objects?
+    W0401: Wildcard import %s
+    This is not that bad and we depend on other 3rd party components heavily using it (pylons).
+
+  Credit to Gullaume Gardey for the config file.
+  
 ## locale:
 
 ### Problem: All locale settings in cron jobs are set to "POSIX" rather than user's default in Ubuntu.
