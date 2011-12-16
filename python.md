@@ -57,6 +57,53 @@ Python practices:
     
         sys.exit(ret)
 
+## Log configuration template:
+    [loggers]
+    keys=root,project
+    
+    [handlers]
+    keys=syslog,email,console,file
+    
+    [formatters]
+    keys=default
+    
+    [handler_console]
+    class=StreamHandler
+    level=NOTSET
+    formatter=default
+    args=(sys.stdout,)
+    
+    [handler_syslog]
+    class=logging.handlers.SysLogHandler
+    level=DEBUG
+    formatter=default
+    args=('/dev/log', handlers.SysLogHandler.LOG_USER)
+    
+    [handler_email]
+    class=logging.handlers.SMTPHandler
+    level=ERROR
+    formatter=default
+    args=('localhost', '', [ 'SOMEONE@project.com' ], "Houston, we have a problem... no, just kidding!")
+    
+    [handler_file]
+    class=FileHandler
+    level=DEBUG
+    formatter=default
+    args=('debug.log',)
+    
+    [formatter_default]
+    format='NAME_OF_YOUR_SCRIPT[%(filename)s:%(lineno)d]- %(asctime)s - %(levelname)s - %(message)s'
+    
+    [logger_root]
+    level=DEBUG
+    handlers=console,file
+    
+    [logger_project]
+    level=DEBUG
+    qualname=semetric
+    handlers=console,file
+    propagate=0
+
 ## locale:
 
 ### Problem: All locale settings in cron jobs are set to "POSIX" rather than user's default in Ubuntu.
