@@ -26,7 +26,7 @@ if __name__ == "__main__":
     from optparse import OptionParser
 
     # Configuration items
-    config_path = pjoin(expanduser('~'), '.semetric')
+    config_path = pjoin(expanduser('~'), '.your_project_name')
     cfg = SafeConfigParser()
     cfg.read(pjoin(config_path, 'config'))
 
