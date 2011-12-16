@@ -33,6 +33,12 @@ Python practices:
   - Solution: What you can do instead is create (if not already present) the file /etc/environment and add the following line:
 LANG=en_US.UTF-8 
   - Tested environment: haven't tested yet
+  - In python:
+  
+    > import locale
+
+    > locale.setlocale("en_US", "UTF-8")
+
   - [More info](http://www.logikdev.com/2010/02/02/locale-settings-for-your-cron-job/)
 
   
