@@ -27,6 +27,8 @@ Python practices:
 
   Credit to Gullaume Gardey for the config file.
   
+## [Turning Vim into a modern Python IDE](http://sontek.net/turning-vim-into-a-modern-python-ide)
+  
 ## locale:
 
 ### Problem: All locale settings in cron jobs are set to "POSIX" rather than user's default in Ubuntu.
