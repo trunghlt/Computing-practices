@@ -1,6 +1,8 @@
 Python practices:
 =================
 
+## [PEP8](http://www.python.org/dev/peps/pep-0008/) & [Google practices](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html)
+
 ## [Boilerplate](python/boilerplate.py)
 
 ## [Log configuration template](python/log.cfg)
